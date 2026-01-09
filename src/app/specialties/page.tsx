@@ -26,7 +26,7 @@ const specialties = [
     name: "Neuroscience", 
     icon: Brain, 
     color: "bg-purple-500", 
-    img: "/doc5.webp  ",
+    img: "/doc5.webp",
     desc: "Comprehensive care for neurological conditions using advanced neuroimaging and minimally invasive surgery."
   },
   { 
