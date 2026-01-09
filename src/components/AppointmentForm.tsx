@@ -70,7 +70,7 @@ export function AppointmentForm() {
                 <FormControl>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground flex-shrink-0" />
-                    <Input placeholder="John Doe" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
+                    <Input placeholder="Rahul Sharma" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -86,7 +86,7 @@ export function AppointmentForm() {
                 <FormControl>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground flex-shrink-0" />
-                    <Input placeholder="john@example.com" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
+                    <Input placeholder="rahul.sharma@gmail.com" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -102,7 +102,7 @@ export function AppointmentForm() {
                 <FormControl>
                   <div className="relative">
                     <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground flex-shrink-0" />
-                    <Input placeholder="+1 (555) 000-0000" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
+                    <Input placeholder="+91 98765 43210" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
                   </div>
                 </FormControl>
                 <FormMessage />
