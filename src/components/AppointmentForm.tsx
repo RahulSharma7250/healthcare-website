@@ -29,7 +29,7 @@ const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
   phone: z.string().min(10, { message: "Please enter a valid phone number." }),
-  department: z.string({ required_error: "Please select a department." }),
+  department: z.string({ message: "Please select a department." }),
   date: z.string().min(1, { message: "Please select a date." }),
   time: z.string().min(1, { message: "Please select a time slot." }),
   message: z.string().optional(),
@@ -59,8 +59,8 @@ export function AppointmentForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <FormField
             control={form.control}
             name="name"
@@ -69,8 +69,8 @@ export function AppointmentForm() {
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input placeholder="John Doe" className="pl-10 rounded-xl" {...field} />
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    <Input placeholder="John Doe" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -85,8 +85,8 @@ export function AppointmentForm() {
                 <FormLabel>Email Address</FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input placeholder="john@example.com" className="pl-10 rounded-xl" {...field} />
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    <Input placeholder="john@example.com" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -101,8 +101,8 @@ export function AppointmentForm() {
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input placeholder="+1 (555) 000-0000" className="pl-10 rounded-xl" {...field} />
+                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    <Input placeholder="+1 (555) 000-0000" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -117,9 +117,9 @@ export function AppointmentForm() {
                 <FormLabel>Department</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger className="rounded-xl">
+                    <SelectTrigger className="rounded-xl py-3 sm:py-4 h-auto text-base">
                       <div className="flex items-center gap-2">
-                        <Stethoscope className="h-4 w-4 text-muted-foreground" />
+                        <Stethoscope className="h-4 w-4 text-muted-foreground flex-shrink-0" />
                         <SelectValue placeholder="Select Department" />
                       </div>
                     </SelectTrigger>
@@ -145,8 +145,8 @@ export function AppointmentForm() {
                 <FormLabel>Preferred Date</FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <CalendarIcon className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input type="date" className="pl-10 rounded-xl" {...field} />
+                    <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    <Input type="date" className="pl-10 sm:pl-11 py-3 sm:py-4 text-base rounded-xl h-auto" {...field} />
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -161,9 +161,9 @@ export function AppointmentForm() {
                 <FormLabel>Preferred Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger className="rounded-xl">
+                    <SelectTrigger className="rounded-xl py-3 sm:py-4 h-auto text-base">
                       <div className="flex items-center gap-2">
-                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <Clock className="h-4 w-4 text-muted-foreground flex-shrink-0" />
                         <SelectValue placeholder="Select Time Slot" />
                       </div>
                     </SelectTrigger>
@@ -189,17 +189,17 @@ export function AppointmentForm() {
             <FormItem>
               <FormLabel>Symptoms or Message (Optional)</FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Describe your symptoms or any specific requirements..." 
-                  className="rounded-xl min-h-[100px]" 
-                  {...field} 
+                <Textarea
+                  placeholder="Describe your symptoms or any specific requirements..."
+                  className="rounded-xl min-h-[80px] sm:min-h-[100px] py-3 sm:py-4 text-base resize-none"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full rounded-xl py-6 text-lg font-bold shadow-lg shadow-primary/20">
+        <Button type="submit" className="w-full rounded-xl py-4 sm:py-6 text-base sm:text-lg font-bold shadow-lg shadow-primary/20 h-auto">
           Confirm Appointment
         </Button>
       </form>

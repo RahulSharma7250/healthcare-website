@@ -33,7 +33,7 @@ export default function Home() {
             {/* Decorative Elements */}
             <div className="absolute top-[-10%] right-[-5%] -z-10 h-[250px] w-[250px] sm:h-[350px] sm:w-[350px] md:h-[400px] md:w-[400px] rounded-full bg-primary/20 blur-[100px] animate-pulse" />
             <div className="absolute bottom-[10%] left-[-5%] -z-10 h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px] rounded-full bg-secondary/30 blur-[80px]" />
-
+            
             <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
               <div className="grid items-center gap-12 lg:grid-cols-2">
                 <motion.div 
@@ -50,7 +50,7 @@ export default function Home() {
                       The Future of <br />
                       <span className="text-primary italic">Precision</span> Medicine
                     </h1>
-
+                    
                     <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-muted-foreground mb-6 sm:mb-8 max-w-2xl">
                       Where cutting-edge technology meets compassionate care. We are redefining the patient experience with advanced diagnostics and personalized treatments.
                     </p>
@@ -80,7 +80,7 @@ export default function Home() {
                     </div>
                 </motion.div>
 
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
@@ -89,7 +89,7 @@ export default function Home() {
                   <div className="relative aspect-[4/5] w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[480px] mx-auto lg:ml-auto">
                   <div className="absolute -inset-2 lg:-inset-3 rounded-[2rem] lg:rounded-[2.5rem] border border-primary/20 animate-spin-slow [animation-duration:20s]" />
                   <div className="absolute inset-0 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-xl">
-                    <Image
+                    <Image 
                       src="/doc5.webp"
                       alt="Specialist Indian Doctor"
                       fill
@@ -99,7 +99,7 @@ export default function Home() {
                   </div>
 
                   {/* Floating Elements */}
-                  <motion.div
+                  <motion.div 
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     className="absolute -left-4 lg:-left-8 top-1/4 glass-card rounded-lg lg:rounded-xl p-2 lg:p-3 shadow-xl hidden sm:block"
@@ -115,7 +115,7 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  <motion.div
+                  <motion.div 
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                     className="absolute -right-3 lg:-right-6 bottom-12 lg:bottom-16 glass-card rounded-lg lg:rounded-xl p-3 lg:p-4 shadow-xl hidden sm:block"
@@ -212,13 +212,13 @@ export default function Home() {
                 { name: "Oncology", icon: Dna, color: "bg-emerald-500", img: "/orch.jpeg" },
                 { name: "Dermatology", icon: Sparkles, color: "bg-pink-500", img: "/derma.jpeg" }
               ].map((dept, i) => (
-                <motion.div
+                <motion.div 
                   key={i}
                   whileHover={{ y: -10 }}
                   className="group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] bg-white dark:bg-zinc-900 shadow-xl min-h-[320px] sm:min-h-[360px] md:min-h-[400px]"
                 >
                   <div className="absolute inset-0 w-full h-full">
-                    <Image
+                    <Image 
                       src={dept.img}
                       alt={dept.name}
                       fill
@@ -226,7 +226,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                   </div>
-
+                  
                   <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-10">
                     <div className={cn("h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-2xl flex items-center justify-center text-white shadow-lg", dept.color)}>
                       <dept.icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
@@ -252,7 +252,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
               <div className="order-2 lg:order-1">
-                <SectionHeading
+                <SectionHeading 
                   badge="Patient Stories"
                   title="Voices of Trust"
                   subtitle="We take pride in the lives we touch. Here are some of the stories from our patients who experienced our dedicated care."
@@ -278,7 +278,7 @@ export default function Home() {
               </div>
               <div className="relative order-1 lg:order-2">
                 <div className="relative aspect-square max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[550px] mx-auto rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-2xl">
-                   <Image
+                   <Image 
                     src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop"
                     alt="Happy Patient"
                     fill
@@ -307,7 +307,7 @@ export default function Home() {
             <div className="relative rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] bg-primary p-6 sm:p-10 md:p-16 lg:p-24 overflow-hidden shadow-2xl shadow-primary/30">
               <div className="absolute top-[-20%] right-[-10%] h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px] rounded-full bg-white/10 blur-[120px]" />
               <div className="absolute bottom-[-20%] left-[-10%] h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] md:h-[500px] md:w-[500px] rounded-full bg-black/10 blur-[120px]" />
-
+              
               <div className="relative z-10 text-center max-w-4xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tighter mb-6 sm:mb-8 md:mb-10 leading-[1.1]">
                   Experience <br className="hidden sm:block" /> Better Care.
